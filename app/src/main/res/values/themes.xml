@@ -13,4 +13,15 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="LabelStyle" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="DefaultTextStyle" parent="TextAppearance.MaterialComponents.Body1"/>
+
+    <style name="Button.primaryColor" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
 </resources>

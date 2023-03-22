@@ -18,13 +18,19 @@ import java.util.TimeZone;
 
 public class WeatherInfoViewModel extends ViewModel {
 //    private LiveData<List<City>> cityListLiveData = MutableLiveData<List<City>>();
-    private MutableLiveData<List<City>> cityListLiveData;
-    private MutableLiveData<String> cityListFailureLiveData;
-    private MutableLiveData<WeatherDataModel> weatherInfoLiveData;
-    private MutableLiveData<String> weatherInfoFailureLiveData;
-    private MutableLiveData<Boolean> progressBarLiveData;
+    public MutableLiveData<List<City>> cityListLiveData;
+    public MutableLiveData<String> cityListFailureLiveData;
+    public MutableLiveData<WeatherDataModel> weatherInfoLiveData;
+    public MutableLiveData<String> weatherInfoFailureLiveData;
+    public MutableLiveData<Boolean> progressBarLiveData;
 
-
+    public WeatherInfoViewModel() {
+        this.cityListLiveData = new MutableLiveData<>();
+        this.cityListFailureLiveData = new MutableLiveData<>();
+        this.weatherInfoLiveData = new MutableLiveData<>();
+        this.weatherInfoFailureLiveData = new MutableLiveData<>();
+        this.progressBarLiveData = new MutableLiveData<>();
+    }
 
     public void getCityList(WeatherInfoModel model){
         model.getCityList(new RequestCompleteListener<List<City>>() {
